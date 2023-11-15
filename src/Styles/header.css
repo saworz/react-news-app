@@ -1,0 +1,91 @@
+:root {
+  --nav-background-color: rgb(42, 42, 70);
+  --nav-hover-color: rgb(87, 87, 134);
+  --nav-font-color: white;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+  background-color: var(--nav-background-color);
+}
+
+.header-div {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+
+.navbar-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--nav-font-color);
+  text-decoration: none;
+  font-size: x-large;
+}
+
+.navbar-menu {
+  display: flex;
+  margin-left: auto;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  display: inline;
+}
+
+.nav-link {
+  color: var(--nav-font-color);
+  text-decoration: none;
+  padding: 20px;
+  font-size: larger;
+}
+
+.nav-link:hover {
+  background-color: var(--nav-hover-color);
+}
+
+.menu-button {
+  display: none;
+  margin: 5px;
+}
+
+.rolldown-menu {
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  height: 100px;
+}
+
+.menu-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--nav-background-color);
+  height: 50%;
+  color: var(--nav-font-color);
+  cursor: pointer;
+}
+
+.menu-option:hover {
+  background-color: var(--nav-hover-color);
+}
+
+@media (max-width: 900px) {
+  .menu-list {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
