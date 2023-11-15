@@ -14,7 +14,7 @@ const Navbar = () => {
   const html = (
     <nav className="navbar">
       <div className="header-div">
-        <a href="" className="navbar-title">Flask News Search Engine</a>
+        <a href="" className="navbar-title">React News Searching</a>
 
         <div className="navbar-menu">
     
@@ -25,7 +25,8 @@ const Navbar = () => {
           <ul className="menu-list">
             <li className="nav-item"><a href="" className="nav-link">Home</a></li>
             <li className="nav-item"><a href="" className="nav-link">About</a></li>
-            <li className="nav-item"><a href="" className="nav-link">Other Projects</a></li>
+            <li className='nav-item'><a href="" className="nav-link">Search News</a></li>
+            <li className="nav-item"><a href="" className="nav-link">My Github</a></li>
           </ul>
         </div>
       </div>
@@ -37,7 +38,10 @@ const Navbar = () => {
               About
             </div>
             <div className="menu-option">
-              Other projects
+              Search News
+            </div>
+            <div className="menu-option">
+              My Github
             </div>
           </div>
     </nav>
