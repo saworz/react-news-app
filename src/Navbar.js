@@ -8,7 +8,6 @@ const Navbar = () => {
 
   const handleButtonClick = () => {
     setMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen ? 'block' : 'none')
   }
 
   const html = (
@@ -26,7 +25,7 @@ const Navbar = () => {
             <li className="nav-item"><a href="" className="nav-link">Home</a></li>
             <li className="nav-item"><a href="" className="nav-link">About</a></li>
             <li className='nav-item'><a href="" className="nav-link">Search News</a></li>
-            <li className="nav-item"><a href="" className="nav-link">My Github</a></li>
+            <li className="nav-item"><a href="https://www.github.com/saworz" target="_blank" rel="noopener noreferrer" className="nav-link">My Github</a></li>
           </ul>
         </div>
       </div>
