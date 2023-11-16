@@ -1,4 +1,4 @@
-import Navbar from './Navbar';
+import NavbarView from './Components/Navbar/NavbarView';
 import Home from './Home';
 
 function App() {
@@ -6,8 +6,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Home />
+      <NavbarView />
     </div>
   );
 };

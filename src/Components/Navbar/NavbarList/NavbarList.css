@@ -1,0 +1,25 @@
+.menu-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  display: inline;
+}
+
+.nav-link {
+  color: var(--nav-font-color);
+  text-decoration: none;
+  padding: 20px;
+  font-size: larger;
+}
+
+.nav-link:hover {
+  background-color: var(--nav-hover-color);
+}
+
+@media (max-width: 900px) {
+  .menu-list {
+    display: none;
+  }
+}

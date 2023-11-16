@@ -1,0 +1,42 @@
+.menu-button {
+  display: none;
+  margin: 5px;
+  width: 50px;
+}
+
+.rolldown-menu {
+  position: fixed;
+  width: 100%;
+  top: 60px;
+}
+
+.menu-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--nav-background-color);
+  height: 50px;
+  color: var(--nav-font-color);
+  cursor: pointer;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-option:hover {
+  background-color: var(--nav-hover-color);
+}
+
+@media (max-width: 900px) {
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (min-width: 900px) {
+  .rolldown-menu {
+    display: none;
+  }
+}

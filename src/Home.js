@@ -3,21 +3,23 @@ import './Styles/home.css';
 
 
 const ToggleButtons = () => {
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState('General');
 
   const handleButtonClick = (topic) => {
     setActiveButton(topic);
   };
 
   const createButton = (topic) => {
-    return (
-    <button
-      onClick={() => handleButtonClick(topic)} class="topic-button"
-      style={{ backgroundColor: activeButton === topic ? 'rgb(140, 140, 136)' : 'rgb(194, 194, 214)' }}
-    >
-      {topic}
-    </button>
-    );
+    const button = (
+      <button
+        onClick={() => handleButtonClick(topic)} className="topic-button"
+        style={{ backgroundColor: activeButton === topic ? 'rgb(140, 140, 136)' : 'rgb(194, 194, 214)' }}
+      >
+        {topic}
+      </button>
+      );
+
+    return button;
   };
 
   return (
@@ -39,10 +41,10 @@ const Home = () => {
     <div className="title-div">
       <h1>Browse most recent news</h1>
     </div>
-    <ToggleButtons />  
+    <ToggleButtons />
   </div>
   
   return (html);
+};
 
-}
 export default Home;
