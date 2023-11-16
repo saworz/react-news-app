@@ -34,9 +34,3 @@
     display: block;
   }
 }
-
-@media (min-width: 900px) {
-  .rolldown-menu {
-    display: none;
-  }
-}

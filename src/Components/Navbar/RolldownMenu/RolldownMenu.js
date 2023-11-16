@@ -1,4 +1,4 @@
-import './RolldownMenu.css'
+import './RolldownMenu.css';
 
 const RolldownMenu = ({ isMenuOpen }) => {
   return (

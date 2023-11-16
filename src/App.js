@@ -1,5 +1,5 @@
 import NavbarView from './Components/Navbar/NavbarView';
-import Home from './Home';
+import MainPageView from './Components/MainPage/MainPageView';
 
 function App() {
 
@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavbarView />
+      <MainPageView />
     </div>
   );
 };

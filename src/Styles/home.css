@@ -1,42 +1,5 @@
-.content-div {
-  position: absolute;
-  top: 60px;
-  width: 100%;
-}
 
-.title-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 30px;
-  font-size: x-large;
-}
 
-.news-topics {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
-.topic-button {
-  appearance: none;  border: 2px solid #1A1A1A;
-  border-radius: 15px;
-  color: #3B3B3B;
-  cursor: pointer;
-  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 16px;
-  font-weight: 600;
-  margin: 20px;
-  width: 120px;
-  padding: 10px;
-  text-align: center;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-}
 
-.topic-button:hover {
-  color: #fff;
-  background-color: #1A1A1A;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-}
+
