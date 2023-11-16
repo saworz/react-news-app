@@ -1,5 +1,5 @@
-import NavbarView from './Components/Navbar/NavbarView';
-import MainPageView from './Components/MainPage/MainPageView';
+import NavbarView from './components/Navbar/NavbarView';
+import MainPageView from './components/MainPage/MainPageView';
 
 function App() {
 

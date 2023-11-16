@@ -38,13 +38,47 @@
 
 .news-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
+  flex-direction: column;
   height: 500px;
   width: 300px;
-  border: 2px solid black;
-  border-radius: 20px;
+  border: 2px solid rgb(223, 222, 222);
+  border-radius: 10px;
   margin: 10px;
+}
 
+.news-image {
+  float: top;
+}
+
+.news-image img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+}
+
+.news-source {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.news-title {
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.news-content {
+  margin-top: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.news-date {
+  margin-top: auto;
+  margin-bottom: 5px;
+  margin-left: 10px;
 }

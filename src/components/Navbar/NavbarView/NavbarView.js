@@ -1,10 +1,10 @@
 import './NavbarView.css';
-import { React, useState, useEffect } from 'react';
+import { React, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import NavbarList from '../NavbarList';
 import RolldownMenu from '../RolldownMenu';
-import useWindowDimensions from '../../../Hooks/WindowSize';
+import useWindowDimensions from '../../../hooks/WindowSize';
 
 
 const Navbar = () => {
