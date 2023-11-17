@@ -21,7 +21,6 @@ const NewsGrid = () => {
     if (!news) {
       return <p> Loading articles </p>;
     } else {
-        console.log(news)
         return news.articles.map((article, index) => {
           if (!article.urlToImage || !article.title || !article.source.name || !article.url || !article.content || !article.publishedAt) {
             return null

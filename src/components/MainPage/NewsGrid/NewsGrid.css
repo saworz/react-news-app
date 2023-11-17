@@ -67,14 +67,18 @@
   justify-content: center;
   text-align: center;
   margin-top: 10px;
-  padding: 10px;
+  padding: 5px;
   overflow: hidden;
+  font-weight: 600;
 }
 
 .news-content {
   margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   overflow: hidden;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .news-date {
