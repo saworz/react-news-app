@@ -1,9 +1,8 @@
 import './NewsGrid.css'
 import useFetchData from '../../../api/FetchData';
+import { useState } from 'react';
 
-const NewsGrid = () => {
-  const news = useFetchData();
-  
+const NewsGrid = ({ newsTopic }) => {
   const formatPublishedDate = (publishedAt) => {
     const options = { 
       year: 'numeric', 
@@ -16,7 +15,8 @@ const NewsGrid = () => {
     const formattedDate = new Date(publishedAt).toLocaleString('en-GB', options);
     return formattedDate;
   };
-
+  const news = useFetchData(newsTopic);
+  
   const createArticles = () => {
     if (!news) {
       return <p> Loading articles </p>;
