@@ -1,6 +1,5 @@
 import './Buttons.css';
 import { useState } from "react";
-import useFetchData from '../../../api/FetchData';
 
 const ToggleButtons = ({ onUpdateNews }) => {
   const [activeButton, setActiveButton] = useState('General');

@@ -1,6 +1,5 @@
 import './NewsGrid.css'
 import useFetchData from '../../../api/FetchData';
-import { useState } from 'react';
 
 const NewsGrid = ({ newsTopic }) => {
   const formatPublishedDate = (publishedAt) => {
