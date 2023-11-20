@@ -22,7 +22,7 @@ const Navbar = () => {
   const html = (
     <nav className="navbar">
       <div className="header-div">
-        <a href="" className="navbar-title">React News Searching</a>
+        <a href="/" className="navbar-title">React News Searching</a>
 
         <div className="navbar-menu">
           <button className="menu-button" onClick={handleButtonClick}>
