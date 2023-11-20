@@ -1,0 +1,13 @@
+.content-div {
+  top: 60px;
+  position: absolute;
+  width: 100%;
+}
+
+.search-news {
+  width: 60%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
