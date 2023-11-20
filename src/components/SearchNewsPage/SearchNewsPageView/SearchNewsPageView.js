@@ -14,20 +14,24 @@ const SearchNewsPageView = () => {
 
   const handleInputChange = (data) => {
     const { name, value } = data.target;
-    console.log(name, value)
+    setSearchInputs((prevInputs) => ({
+      ...prevInputs,
+      [name]: value
+    }));
+    console.log(searchInputs)
   };
 
   return (
-    <div class="content-div">
-      <div class="search-news">
+    <div className="content-div">
+      <div className="search-news">
         <h1>Custom searching query</h1>
-        q: <input type="text" name="query"  onChange={handleInputChange}></input>
-        sources: <input type="text" name="sources" value={searchInputs.sources} onChange={handleInputChange}></input>
-        domains: <input type="text" name="domains" value={searchInputs.domains} onChange={handleInputChange}></input>
-        from: <input type="date" name="fromDate" value={searchInputs.fromDate} onChange={handleInputChange}></input>
-        to: <input type="date" name="toDate" value={searchInputs.toDate} onChange={handleInputChange}></input>
-        language: <input type="text" name="language" value={searchInputs.language} onChange={handleInputChange}></input>
-        sortBy: <input type="text" name="sortBy" value={searchInputs.sortBy} onChange={handleInputChange}></input>
+        q: <input type="text" name="query" onChange={handleInputChange}></input>
+        sources: <input type="text" name="sources" onChange={handleInputChange}></input>
+        domains: <input type="text" name="domains" onChange={handleInputChange}></input>
+        from: <input type="date" name="fromDate" onChange={handleInputChange}></input>
+        to: <input type="date" name="toDate" onChange={handleInputChange}></input>
+        language: <input type="text" name="language" onChange={handleInputChange}></input>
+        sortBy: <input type="text" name="sortBy" onChange={handleInputChange}></input>
       </div>  
     </div>
   )
