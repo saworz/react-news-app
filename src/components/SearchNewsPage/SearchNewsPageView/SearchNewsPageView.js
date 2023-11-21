@@ -4,8 +4,10 @@ import SearchQueryFields from '../SearchQueryFields';
 
 const SearchNewsPageView = () => {
   return (
-    <SearchQueryFields />
-  )
+    <div className='content-div'>
+      <SearchQueryFields />
+    </div>
+  );
 };
 
 export default SearchNewsPageView;

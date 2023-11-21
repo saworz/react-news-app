@@ -1,4 +1,4 @@
-import './SearchQueryFields';
+import './SearchQueryFields.css';
 import { useEffect, useState } from 'react';
 
 

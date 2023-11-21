@@ -1,0 +1,39 @@
+.search-content {
+  top: 60px;
+  position: absolute;
+  width: 100%;
+}
+
+.search-content h1 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.search-content button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.search-fields {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-field {
+  width: 350px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.search-field input, select {
+  display: flex;
+  float: right;
+  box-sizing: border-box;
+  width: 250px;
+}
