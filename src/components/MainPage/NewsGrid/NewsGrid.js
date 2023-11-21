@@ -50,6 +50,7 @@ const NewsGrid = ({ newsTopic }) => {
 
   return (
     <div className='page-content'>
+      Remove .env later on
       <div className='news-grid'>
         { createArticles() }
       </div>
