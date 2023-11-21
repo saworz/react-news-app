@@ -6,6 +6,7 @@ const NavbarList = () => {
       <li className="nav-item"><a href="/" className="nav-link">Home</a></li>
       <li className="nav-item"><a href="/about" className="nav-link">About</a></li>
       <li className='nav-item'><a href="/search-news" className="nav-link">Search News</a></li>
+      <li className='nav-item'><a href="/settings" className="nav-link">Settings</a></li>
       <li className="nav-item"><a href="https://www.github.com/saworz" target="_blank" rel="noopener noreferrer" className="nav-link">My Github</a></li>
     </ul>
   );

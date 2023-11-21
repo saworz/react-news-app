@@ -18,6 +18,11 @@ const RolldownMenu = ({ isMenuOpen }) => {
           Search News
         </div>
       </a>
+      <a href="/settings">
+        <div className="menu-option">
+          Settings
+        </div>
+      </a>
       <a href="https://www.github.com/saworz" target="_blank" rel="noreferrer" className="menu-link">
         <div className="menu-option">
           My Github
