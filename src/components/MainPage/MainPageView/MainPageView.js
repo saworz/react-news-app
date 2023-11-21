@@ -1,7 +1,7 @@
 import './MainPageView.css';
 import PageTitle from "../PageTitle";
 import Buttons from '../Buttons';
-import NewsGrid from '../NewsGrid';
+import NewsGrid from '../../NewsGrid/NewsGrid';
 import NoApiKey from '../../NoApiKey';
 import validateApiKey from '../../../api/ValidateApiKey';
 import { useState } from 'react';
