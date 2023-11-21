@@ -29,14 +29,52 @@ const SearchNewsPageView = () => {
   }, [searchInputs]);
 
   return (
-    <div className="content-div">
+    <div className="search-content">
       <h1>Custom searching query</h1>
+
       <div className="search-fields">
         <div className="search-field">
-          q: <input type="text" name="query" onChange={handleInputChange}></input>
+          Query text: <input type="text" name="query" onChange={handleInputChange}></input>
         </div>
         <div className="search-field">
-          language: <select name="language" onChange={handleInputChange}>
+          Search in: <select name="searchIn" onChange={handleInputChange}>
+            <option value="">Fields to search</option>
+            <option value="title">Title</option>
+            <option value="description">Description</option>
+            <option value="content">Content</option>
+          </select>
+        </div>
+      </div>
+
+      <div className="search-fields">
+        <div className="search-field">
+          Sources: <input type="text" name="sources" onChange={handleInputChange}></input>
+        </div>
+        <div className="search-field">
+          Domains: <input type="text" name="domains" onChange={handleInputChange}></input>
+        </div>
+      </div>
+
+      <div className="search-fields">
+        <div className="search-field">
+          From: <input type="date" name="fromDate" onChange={handleInputChange}></input>
+        </div>
+        <div className="search-field">
+          To: <input type="date" name="toDate" onChange={handleInputChange}></input>
+        </div>
+      </div>
+
+      <div className="search-fields">
+        <div className="search-field">
+          Sort by: <select name="sortBy" onChange={handleInputChange}>
+            <option value="">Sorting type</option>
+            <option value="relevancy">Relevancy</option>
+            <option value="popularity">Popularity</option>
+            <option value="publishedAt">PublishedAt</option>
+          </select>
+        </div>
+        <div className="search-field">
+          Language: <select name="language" onChange={handleInputChange}>
             <option value="">Select language</option>
             <option value="en">English</option>
             <option value="ar">Arabic</option>
@@ -53,35 +91,8 @@ const SearchNewsPageView = () => {
             <option value="zh">Chinese</option>
           </select>
         </div>
+      </div>
 
-      </div>
-      <div className="search-fields">
-        <div className="search-field">
-          sources: <input type="text" name="sources" onChange={handleInputChange}></input>
-        </div>
-        <div className="search-field">
-          domains: <input type="text" name="domains" onChange={handleInputChange}></input>
-        </div>
-      </div>
-      <div className="search-fields">
-        <div className="search-field">
-          from: <input type="date" name="fromDate" onChange={handleInputChange}></input>
-        </div>
-        <div className="search-field">
-          to: <input type="date" name="toDate" onChange={handleInputChange}></input>
-        </div>
-      </div>
-      <div className="search-fields">
-        <div className="search-field">
-          sortBy: <select name="sortBy" onChange={handleInputChange}>
-            <option value="">Sorting type</option>
-            <option value="relevancy">Relevancy</option>
-            <option value="popularity">Popularity</option>
-            <option value="publishedAt">PublishedAt</option>
-          </select>
-        </div>
-      </div>
-        
         <button onClick={handleSearch}>Search</button>
     </div>
   )
