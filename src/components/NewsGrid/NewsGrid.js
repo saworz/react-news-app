@@ -1,7 +1,7 @@
 import './NewsGrid.css'
 import useFetchData from '../../api/FetchData';
 
-const NewsGrid = ({ newsTopic }) => {
+const NewsGrid = ({ newsTopic, newsQuery }) => {
   const formatPublishedDate = (publishedAt) => {
     const options = { 
       year: 'numeric', 
@@ -14,7 +14,16 @@ const NewsGrid = ({ newsTopic }) => {
     const formattedDate = new Date(publishedAt).toLocaleString('en-GB', options);
     return formattedDate;
   };
-  const news = useFetchData(newsTopic);
+
+  let searchData;
+
+  if (newsTopic) {
+    searchData = newsTopic;
+  } else if (newsQuery) {
+    searchData = newsQuery;
+  };
+
+  const news = useFetchData(searchData);
   
   const createArticles = () => {
     if (!news) {

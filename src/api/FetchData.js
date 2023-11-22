@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react";
 
-const useFetchData = (topic) => {
+const useFetchData = (searchData) => {
+  console.log(searchData);
+  let topic;
+
+  if (typeof searchData === 'string') {
+    topic = searchData;
+  } else if (typeof searchData === 'object') {
+    topic = 'object' 
+  } else if (typeof searchData === 'undefined') {
+    console.log("UNDEFINED")
+  };
+
   const [news, setNews] = useState(null);
 
   useEffect(() => {

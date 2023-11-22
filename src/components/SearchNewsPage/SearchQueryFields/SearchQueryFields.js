@@ -2,7 +2,7 @@ import './SearchQueryFields.css';
 import { useEffect, useState } from 'react';
 
 
-const SearchQueryFields = () => {
+const SearchQueryFields = ({ onSearchButton }) => {
   const [searchInputs, setSearchInputs] = useState({
     query: '',
     sources: '',
@@ -22,12 +22,8 @@ const SearchQueryFields = () => {
   };
 
   const handleSearch = () => {
-    console.log('search')
+    onSearchButton(searchInputs);
   };
-
-  useEffect(() => {
-    console.log(searchInputs)
-  }, [searchInputs]);
 
   return (
     <div className="search-content">
