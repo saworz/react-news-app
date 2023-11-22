@@ -4,11 +4,12 @@ import { useEffect, useState } from 'react';
 
 const SearchQueryFields = ({ onSearchButton }) => {
   const [searchInputs, setSearchInputs] = useState({
-    query: '',
+    q: '',
+    searchIn: '',
     sources: '',
     domains: '',
-    fromDate: '',
-    toDate: '',
+    from: '',
+    to: '',
     language: '',
     sortBy: '',
   });
@@ -31,7 +32,7 @@ const SearchQueryFields = ({ onSearchButton }) => {
 
       <div className="search-fields">
         <div className="search-field">
-          Query text: <input type="text" name="query" onChange={handleInputChange}></input>
+          Query text: <input type="text" name="q" onChange={handleInputChange}></input>
         </div>
         <div className="search-field">
           Search in: <select name="searchIn" onChange={handleInputChange}>
@@ -54,10 +55,10 @@ const SearchQueryFields = ({ onSearchButton }) => {
 
       <div className="search-fields">
         <div className="search-field">
-          From: <input type="date" name="fromDate" onChange={handleInputChange}></input>
+          From: <input type="date" name="from" onChange={handleInputChange}></input>
         </div>
         <div className="search-field">
-          To: <input type="date" name="toDate" onChange={handleInputChange}></input>
+          To: <input type="date" name="to" onChange={handleInputChange}></input>
         </div>
       </div>
 
