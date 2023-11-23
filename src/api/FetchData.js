@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
 const useFetchData = (searchData) => {
-  const apiKey = process.env.REACT_APP_API_KEY;
+  const apiKey = localStorage.getItem('apiKey');
+  let errorText = 'Error fetching data. Verify API Key or add more filters.'
   let apiUrl;
   
   const getCategoryUrl = (topic) => {
@@ -16,11 +17,18 @@ const useFetchData = (searchData) => {
       queryString += newEntry
     };
 
+    let filtersUsed = 0;
+
     Object.keys(customQuery).forEach((key) => {
       if (customQuery[key]) {
         addFieldToQuery(key, customQuery[key])
+        filtersUsed += 1;
       };
     });
+
+    if (filtersUsed === 0) {
+      errorText = 'Use at least one filter.'
+    };
 
     const baseUrl = 'https://newsapi.org/v2/everything?';
     const finalUrl = baseUrl + queryString + `apiKey=${apiKey}`;
@@ -40,15 +48,18 @@ const useFetchData = (searchData) => {
     fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
-          throw Error('Error fetching data')
+          throw Error(errorText);
         }
         return response.json()})
-      .then((data) => {setNews(data)})
+      
+      .then((data) => {
+        setNews(data)
+        setError(null)})
+      
       .catch(err => {
         setError(err)});
   }, [apiUrl]);
   
-
   return {
     news: news, 
     error: error};

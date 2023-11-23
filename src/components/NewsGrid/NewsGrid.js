@@ -27,7 +27,10 @@ const NewsGrid = ({ newsTopic, newsQuery }) => {
   
   const createArticles = () => {
     if (!news) {
-      return <p> Loading articles </p>;
+      return (
+      <div className='news-loading'>
+        Loading articles...
+      </div>);
     } else {
         return news.articles.map((article, index) => {
           if (!article.urlToImage || !article.title || !article.source.name || !article.url || !article.content || !article.publishedAt) {
@@ -37,7 +40,7 @@ const NewsGrid = ({ newsTopic, newsQuery }) => {
           return (
           <div key={index} className='news-container'>
             <div className='news-image'>
-              <img src={ article.urlToImage } />
+              <img src={ article.urlToImage } alt="news img" />
             </div>
             <div className='news-source'>
               Source: { article.source.name }
@@ -68,7 +71,6 @@ const NewsGrid = ({ newsTopic, newsQuery }) => {
 
   return (
     <div className='page-content'>
-      Remove .env later on
       { error ? showError() : null }
       <div className='news-grid'>
         { !error ? createArticles() : null }
