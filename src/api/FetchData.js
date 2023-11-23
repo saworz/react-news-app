@@ -34,13 +34,24 @@ const useFetchData = (searchData) => {
   };
 
   const [news, setNews] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch(apiUrl)
-      .then((response) => {return response.json()})
-      .then((data) => {setNews(data)});
+      .then((response) => {
+        if (!response.ok) {
+          throw Error('Error fetching data')
+        }
+        return response.json()})
+      .then((data) => {setNews(data)})
+      .catch(err => {
+        setError(err)});
   }, [apiUrl]);
-  return news;
+  
+
+  return {
+    news: news, 
+    error: error};
 };
 
 export default useFetchData;

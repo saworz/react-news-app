@@ -23,7 +23,7 @@ const NewsGrid = ({ newsTopic, newsQuery }) => {
     searchData = newsQuery;
   };
 
-  const news = useFetchData(searchData);
+  const { news, error } = useFetchData(searchData);
   
   const createArticles = () => {
     if (!news) {
@@ -57,11 +57,21 @@ const NewsGrid = ({ newsTopic, newsQuery }) => {
     }
   };
 
+  const showError = () => {
+    return (
+      <div className="fetch-error">
+        <h2>Error while fetching data from API.</h2>
+        Error message: {error.message}
+      </div>
+    );
+  };
+
   return (
     <div className='page-content'>
       Remove .env later on
+      { error ? showError() : null }
       <div className='news-grid'>
-        { createArticles() }
+        { !error ? createArticles() : null }
       </div>
     </div>
 

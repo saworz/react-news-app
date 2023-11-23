@@ -86,3 +86,7 @@
   margin-bottom: 5px;
   margin-left: 10px;
 }
+
+.fetch-error {
+  text-align: center;
+}
